@@ -1,0 +1,108 @@
+#container {
+  width: 800px;
+  height: 600px;
+  background-image: url("../../assets/pt-bg.png");
+  background-repeat: no-repeat;
+  color: #ffffff;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  #content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px;
+    height: 80%;
+    width: 100%;
+
+    #header {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-content: center;
+
+      #day-time {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+      }
+
+      #date {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+      }
+
+      #vl {
+        background-color: #ffffff;
+        width: 1px;
+        opacity: 0.33;
+        margin-inline-start: 12px;
+        margin-inline-end: 12px;
+      }
+    }
+
+    #body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 80px;
+
+      .label {
+        font-size: 16px;
+      }
+
+      #time-remaining {
+        font-size: 50px;
+      }
+
+      #prayer-title {
+        font-size: 30px;
+      }
+
+      #athan-btns {
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+      }
+
+      .athan-btn {
+        border: none;
+        border-radius: 13px;
+        border: 1px solid #ffffff2f;
+        background: #ffffff10;
+        color: #ffffff;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        font-size: 12px;
+        padding: 6px 10px;
+        margin-inline-start: 10px;
+
+        i {
+          margin-inline-start: 7px;
+        }
+
+        &:hover {
+          background-color: #ffffff4d;
+        }
+
+        &:disabled {
+          opacity: 0.53;
+        }
+      }
+    }
+
+    #footer {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+  }
+}

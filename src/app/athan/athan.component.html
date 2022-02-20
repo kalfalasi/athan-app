@@ -1,0 +1,43 @@
+<div id="container">
+  <div id="content">
+    <div id="header">
+      <div id="day-time">
+        <div>{{ day }}</div>
+        <div>{{ time }}</div>
+      </div>
+      <div id="vl"></div>
+      <div id="date">
+        <div>{{ date }}</div>
+        <div>{{ hijriDate }}</div>
+      </div>
+    </div>
+    <div id="body">
+      <ng-container *ngIf="!prayersCompleted">
+        <div class="label">Next athan will be in</div>
+        <div id="time-remaining">{{ timeRemaining }}</div>
+        <div id="prayer-title">{{ nextPrayerLabel }}</div>
+      </ng-container>
+      <ng-container *ngIf="prayersCompleted">
+        <div class="label">All prayers completed for today.</div>
+      </ng-container>
+      <div id="athan-btns">
+        <button *ngIf="audio.paused"
+                type="button"
+                id="play"
+                class="athan-btn"
+                (click)="playAudio()">Play Athan <i class="fas fa-play"></i></button>
+        <button *ngIf="!audio.paused"
+                type="button"
+                id="pause"
+                class="athan-btn"
+                (click)="pauseAudio()">Pause Athan <i class="fas fa-pause"></i></button>
+      </div>
+    </div>
+    <div id="footer">
+      <ng-container *ngFor="let time of athanTimingsArray; let i = index">
+        <athan-time (muteAudio)="updateMutedAthans($event, i)"
+                    [time]="time"></athan-time>
+      </ng-container>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,38 @@
+#card {
+  background: #ffffff10;
+  border: 1px solid #ffffff4d;
+  border-radius: 11px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 18px;
+
+  #title {
+    font-size: 16.5px;
+    font-weight: bold;
+  }
+
+  #time {
+    font-size: 22.5px;
+  }
+
+  i {
+    font-size: 30px;
+    margin-top: 15px;
+  }
+
+  .fa-volume-mute {
+    opacity: 0.33;
+  }
+
+  &:hover {
+    background-color: #ffffff4d;
+    cursor: pointer;
+  }
+
+  &.active {
+    background-color: rgba(255, 255, 255, 0.98);
+    color: #135b74;
+    cursor: pointer;
+  }
+}

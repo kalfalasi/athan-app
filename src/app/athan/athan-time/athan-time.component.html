@@ -1,0 +1,10 @@
+<div id="card"
+     [class.active]="time.isCurrent"
+     (click)="toggleMute()">
+   <div id="title">{{ time.title }}</div>
+   <div id="time">{{ formatTime(time.time) }}</div>
+   <i *ngIf="time.isMuted"
+      class="fas fa-volume-mute"></i>
+   <i *ngIf="!time.isMuted"
+      class="fas fa-volume-up"></i>
+</div>
