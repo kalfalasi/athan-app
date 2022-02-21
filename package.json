@@ -1,5 +1,5 @@
 {
-  "name": "angular-electron",
+  "name": "athan-app",
   "version": "10.4.1",
   "description": "Angular 13 with Electron 16 (Typescript + SASS + Hot Reload)",
   "homepage": "https://github.com/maximegris/angular-electron",
@@ -36,6 +36,8 @@
     "electron:serve": "wait-on tcp:4200 && npm run electron:serve-tsc && electron . --serve",
     "electron:local": "npm run build:prod && electron .",
     "electron:build": "npm run build:prod && electron-builder build --publish=never",
+    "electron:mac": "npm run build:prod && electron-builder build --publish=never",
+    "electron:win": "npm run build:prod && electron-builder build --win --publish=never",
     "test": "ng test --watch=false",
     "test:watch": "ng test",
     "e2e": "npm run build:prod && playwright test -c e2e/playwright.config.ts e2e/",
@@ -55,6 +57,7 @@
     "@fortawesome/fontawesome-free": "6.0.0",
     "@fortawesome/fontawesome-svg-core": "1.3.0",
     "@fortawesome/free-solid-svg-icons": "6.0.0",
+    "electron-packager": "15.4.0",
     "moment": "2.29.1",
     "rxjs": "7.4.0",
     "tslib": "^2.1.0",
