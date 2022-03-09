@@ -29,7 +29,7 @@ export class AthanComponent implements OnInit {
 
   constructor() {
     // audio src
-    this.audio.src = "./assets/athan-new.mp3";
+    this.audio.src = "./assets/NasserAlGattamiAzan.mp3";
     //this.playMutedAudio();
 
     // load muted athan timings from session storage
